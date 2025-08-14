@@ -2,17 +2,6 @@ import streamlit as st
 import pandas as pd
 import joblib
 from PIL import Image
-import os
-import rarfile
-
-os.system("apt-get install -y unrar")
-
-def extract_rar_if_needed(rar_path, target_file):
-    if not os.path.exists(target_file) and os.path.exists(rar_path):
-        rf = rarfile.RarFile(rar_path)
-        rf.extractall(".")
-
-extract_rar_if_needed("zomato_classifier(3).rar", "zomato_classifier(3).pkl")
 
 @st.cache_data
 def load_model():
@@ -83,4 +72,5 @@ elif page == "EDA":
     st.header("8. Restaurants per price band")
     image = Image.open(r"05_price_bands.png")
     st.image(image, width=700)
+
 
