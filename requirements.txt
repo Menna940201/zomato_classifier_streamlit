@@ -6,5 +6,6 @@ joblib
 matplotlib
 seaborn
 tensorflow
-zipfile
+
+
 
