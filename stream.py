@@ -6,11 +6,11 @@ from PIL import Image
 
 @st.cache_data
 def load_model():
-    return joblib.load(r"C:\Users\programing mena\Desktop\learn python\zomato_classifier(3).pkl")
+    return joblib.load(r"zomato_classifier(3).pkl")
 
 @st.cache_data
 def load_data():
-    return pd.read_csv(r"C:\Users\programing mena\Desktop\learn python\zomato_clean(3).csv")
+    return pd.read_csv(r"zomato_clean(3).csv")
 
 model = load_model()
 df = load_data()
@@ -47,29 +47,29 @@ if page == "Prediction":
 elif page == "EDA":
     st.subheader("EDA Page")
     st.header("1. Top 10 cuisines")
-    image = Image.open(r"C:\Users\programing mena\Downloads\Top10Cuisines.png")
+    image = Image.open(r"Top10Cuisines.png")
     st.image(image, width=700)
 
     st.header("3. Number of resturants per city")
-    image = Image.open(r"C:\Users\programing mena\Downloads\RestaurantsperCity.png")
+    image = Image.open(r"RestaurantsperCity.png")
     st.image(image, width=700)
 
     st.header("4. Rating distribution per city")
-    image = Image.open(r"C:\Users\programing mena\Downloads\RatingbyCity.png")
+    image = Image.open(r"RatingbyCity.png")
     st.image(image, width=700)
 
     st.header("5. the ratio of resturants that provide and dont provide table booking")
-    image = Image.open(r"C:\Users\programing mena\Downloads\rationOfTableBooking.png")
+    image = Image.open(r"rationOfTableBooking.png")
     st.image(image, width=700)
 
     st.header("6. Rating distribution")
-    image = Image.open(r"C:\Users\programing mena\Downloads\ratingDistribution.png")
+    image = Image.open(r"ratingDistribution.png")
     st.image(image, width=700)
 
     st.header("7. Online order availability")
-    image = Image.open(r"C:\Users\programing mena\Downloads\1_online_order_pie.png")
+    image = Image.open(r"1_online_order_pie.png")
     st.image(image, width=700)
 
     st.header("8. Restaurants per price band")
-    image = Image.open(r"C:\Users\programing mena\Downloads\05_price_bands.png")
+    image = Image.open(r"05_price_bands.png")
     st.image(image, width=700)
