@@ -7,12 +7,9 @@ from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, accuracy_score
 import joblib
-import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Flatten, Dense
 from sklearn.neural_network import MLPClassifier
 
-df = pd.read_csv(r"D:\datasets\zomato.csv")
+df = pd.read_csv(r"zomato.csv")
 
 df.drop(columns=['url', 'address', 'name', 'phone', 'reviews_list', 'menu_item', 'dish_liked'], inplace= True, errors= "ignore")
 
